@@ -1,0 +1,33 @@
+body{
+background-color : #241c36;
+}
+h1{
+	width: 300px;
+	margin: auto;
+}
+#connection_box
+{
+background-color: #a593c7;
+border : black solid 2px;
+border-radius:18px;
+width : 75%;
+margin-left: 12.5%;
+}
+	#connection_box fieldset
+	{
+		margin:2%;
+	}
+	
+#Inscription
+{
+background-color: #a593c7;
+border : black solid 2px;
+border-radius:18px;
+width : 85%;
+margin-left: 7.5%;
+
+}
+.ecarte
+{
+margin:2%;
+}

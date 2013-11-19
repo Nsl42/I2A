@@ -1,0 +1,78 @@
+body{
+background-color : #241c36;
+}
+
+#menutop{
+	background-color: #A593C7;
+	width:100%;
+	position:fixed;
+	top:0px;
+	left:0px;
+	height : 100px;
+}
+	.in_menu{
+		text-align:center;
+		margin-top:10px;
+		margin-bottom:10px;
+		margin-left: 10px;
+		font-size:1.8em
+		
+	}
+		.in_menu a{
+			color: black;
+			text-decoration: none;
+			
+		}
+		.in_menu a:visited{
+			color: black;
+		}
+		.in_menu a:hover{
+			color:black;
+		}
+	#name_box{
+		background-color: #7169a2;
+		display:inline-block;
+		border-radius:10px;
+		width:33%;
+		box-shadow: 8px 8px 7px #000; 
+		margin-right:10px;
+		float:left;
+		margin-top: 0.4%;
+	}
+	#name_box img{
+		 
+		float:left;
+		margin-left:10px;
+	}
+	#site_logo{
+		background-color: #7169a2;
+		border-radius:10px;
+		box-shadow: 8px 8px 7px #000;
+		float:left;
+		width:33%;
+		margin-top: 0.4%;	
+		text-align: center;
+	}
+	 
+	#toolbox{
+		margin-left:10px;
+		background-color: #7169a2;
+		border-radius:10px;
+		box-shadow: 8px 8px 7px #000;
+		width:32%;
+		height:80px;
+		float: left;
+		margin-top:0.4%
+		}		
+			#toolbox a{
+			vertical-align:middle;
+			}	
+			#toolbox a.settings:before{
+			 content:url(/I2A/img/icon/settings.png);
+			 }
+			 
+			#toolbox a.deconnect:before{
+			content:url(/I2A/img/icon/logout.png);
+			}	
+	
+
