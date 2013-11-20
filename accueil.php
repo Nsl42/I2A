@@ -23,7 +23,13 @@ include_once('tools/connection.php');
 				<p class="in_menu"><a class="settings" href="settings.php">Param&egrave;tres</a> <a class="deconnect" href="deconnect.php"> Deconnect</a></p>
 		
 			</div>
-			</div>
+		</div>
+		<div id="home">
+		<h2> Welcome </h2>
+		<hr />
+		<div id="external_links"></div><div id="internal_links"></div><div id="schedule"></div>
+		<div id="to_do"></div><div id="notepad"></div>
+		</div>
 	</body>
 </html>
 <?php } 

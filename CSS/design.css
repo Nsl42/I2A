@@ -15,7 +15,7 @@ h1{
 }
 #connection_box
 {
-background-color: rgba(97,39,133,0.7);
+background-color: rgba(31,0,38,0.7);
 border : black dashed 4px;
 border-radius:18px;
 width : 75%;
@@ -27,8 +27,9 @@ margin-top:120px;
 	{
 		margin:2%;
 		height: 85%;
-		background-color: rgba(194,161,211,0.5);
-		border-radius: 10px;
+		background-color: rgba(113,63,122,0.5);
+		border-radius: 18px;
+		border-color: #140020;
 	}
 	#connection_box fieldset h4
 	{
@@ -38,13 +39,13 @@ margin-top:120px;
 	
 	}
 	
-	#mail
+	#div_mail
 	{
 		margin-left : 11.3%;
 		float:left;
 		width:33%
 }
-	#password
+	#div_password
 	{
 	margin-left : 11.3%;
 		float:left;
@@ -54,7 +55,23 @@ margin-top:120px;
 	{
 		background-color: #d2b7de;
 		}
+	#submit
+	{
+	width: 20%;
+	margin-left: 33%;
+	float:left;
+	}
+	#reset
+	{
+	width: 20%;
+	margin-left: 33%;
+	float: left;
+	}
 .ecarte
 {
 margin:2%;
+}
+.clear
+{
+clear:both;
 }

@@ -1,14 +1,24 @@
+html{
+background-image:url(/I2A/img/backs/back.gif);
+margin:0;
+  padding:0;
+  
+  -webkit-background-size: cover; /* pour Chrome et Safari */
+  -moz-background-size: cover; /* pour Firefox */
+  -o-background-size: cover; /* pour Opera */
+  background-size: cover; /* version standardisée */
+}
 body{
-background-color : #241c36;
 }
 
 #menutop{
-	background-color: #A593C7;
+	background-color: #1f0026;
 	width:100%;
 	position:fixed;
 	top:0px;
 	left:0px;
 	height : 100px;
+	box-shadow: 8px 8px 7px rgb(0, 0, 0);
 }
 	.in_menu{
 		text-align:center;
@@ -30,7 +40,7 @@ background-color : #241c36;
 			color:black;
 		}
 	#name_box{
-		background-color: #7169a2;
+		background-color: rgba(113,63,122,0.5);
 		display:inline-block;
 		border-radius:10px;
 		width:33%;
@@ -45,7 +55,7 @@ background-color : #241c36;
 		margin-left:10px;
 	}
 	#site_logo{
-		background-color: #7169a2;
+		background-color: rgba(113,63,122,0.5);
 		border-radius:10px;
 		box-shadow: 8px 8px 7px #000;
 		float:left;
@@ -56,7 +66,7 @@ background-color : #241c36;
 	 
 	#toolbox{
 		margin-left:10px;
-		background-color: #7169a2;
+		background-color: rgba(113,63,122,0.5);
 		border-radius:10px;
 		box-shadow: 8px 8px 7px #000;
 		width:32%;
@@ -74,5 +84,86 @@ background-color : #241c36;
 			#toolbox a.deconnect:before{
 			content:url(/I2A/img/icon/logout.png);
 			}	
-	
+			
+	#home{
+	width: 98.25%;
+	background-color: rgba(67,0,78,0.5);
+	border: solid rgba(33,0,38,1) 5px;
+	position: fixed;
+	top: 100px;
+	left:0px;
+	text-align: center;
+	color: #b799bc;
+	margin:0.5%;
+	}
 
+
+	#external_links
+	{background-image: url(http://fakeimg.pl/200x200/?text=External);
+margin: 50px 0px 0px 13.7%;
+padding: 0;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+width: 15%;
+height: 150;
+float: left;
+}
+#internal_links
+{
+background-image: url(http://fakeimg.pl/200x200/?text=Internal);
+margin: 50px 0px 0px 13.7%;
+padding: 0;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+width: 15%;
+height: 150;
+float: left;
+}
+#schedule{
+background-image: url(http://fakeimg.pl/200x200/?text=Schedule);
+margin: 50px 0px 0px 13.7%;
+padding: 0;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+width: 15%;
+height: 150;
+float: left;
+}
+#to_do {
+background-image: url(http://fakeimg.pl/200x200/?text=To_Do);
+margin: 0;
+padding: 0;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+width: 15%;
+height: 150;
+margin-left: 23.3%;
+margin-top: 75px;
+clear: both;
+display: inline-block;
+float: left;
+}#notepad {
+background-image: url(http://fakeimg.pl/200x200/?text=Notepad);
+margin: 0;
+padding: 0;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+width: 15%;
+height: 150;
+margin-left: 23.3%;
+margin-top: 75px;
+margin-right: 23.3%;
+float: left;
+display: inline-block;
+margin-bottom: 45px;
+}

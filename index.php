@@ -18,10 +18,10 @@ if (isset($_SESSION['isconnected']))
 				<fieldset>
 					<h4> Welcome to the I2A </h4>
 					
-					<div id="mail"><label for="mail"> Mail : </label><input type="text" name="mail" id="mail" /></div>
-					<div id="password"><label for="password"> Password : </label><input type="password" name="password" id="password" /><br/><?php if(isset($_GET['e']) AND $_GET['e'] == "403") { echo "<p style='color : red;'> Mot de passe incorrect </p>";} ?></div>
-					<a href="lostpass.php">Lost Password ?</a><br/>
-					<input type="submit" value="Proceed"> <input type="reset" value="Erase"> 
+					<div id="div_mail"><label for="mail">Mail : </label>&nbsp;<input type="text" name="mail" id="mail" /></div>
+					<div id="div_password"><label for="password"> Password : </label><input type="password" name="password" id="password" /><?php if(isset($_GET['e']) AND $_GET['e'] == "403") { echo "<p style='color : red;'> Mot de passe incorrect </p>";} ?></div>
+					<a href="lostpass.php" class="clear">Lost Password ?</a><br/>
+					<input type="submit" value="Proceed" id="submit"> <input type="reset" value="Erase" id="reset"> 
 				</fieldset>
 			</form>
 		</div>
