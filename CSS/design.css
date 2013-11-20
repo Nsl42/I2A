@@ -1,5 +1,13 @@
-body{
-background-color : #241c36;
+html{
+background-image:url(/I2A/img/backs/back.gif);
+margin:0;
+  padding:0;
+  
+  -webkit-background-size: cover; /* pour Chrome et Safari */
+  -moz-background-size: cover; /* pour Firefox */
+  -o-background-size: cover; /* pour Opera */
+  background-size: cover; /* version standardisée */
+}
 }
 h1{
 	width: 300px;
@@ -7,26 +15,45 @@ h1{
 }
 #connection_box
 {
-background-color: #a593c7;
-border : black solid 2px;
+background-color: rgba(97,39,133,0.7);
+border : black dashed 4px;
 border-radius:18px;
 width : 75%;
 margin-left: 12.5%;
+height: 75%;
+margin-top:120px;
 }
 	#connection_box fieldset
 	{
 		margin:2%;
+		height: 85%;
+		background-color: rgba(194,161,211,0.5);
+		border-radius: 10px;
+	}
+	#connection_box fieldset h4
+	{
+	text-align: center;
+	font-size: 1.8em;
+	color : rgb(68,27,93);
+	
 	}
 	
-#Inscription
-{
-background-color: #a593c7;
-border : black solid 2px;
-border-radius:18px;
-width : 85%;
-margin-left: 7.5%;
-
+	#mail
+	{
+		margin-left : 11.3%;
+		float:left;
+		width:33%
 }
+	#password
+	{
+	margin-left : 11.3%;
+		float:left;
+		width:33%
+	}
+	#mail input
+	{
+		background-color: #d2b7de;
+		}
 .ecarte
 {
 margin:2%;
