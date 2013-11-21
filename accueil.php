@@ -21,7 +21,7 @@ include_once('tools/connection.php');
 			</div>
 			<div id="toolbox">
 				<p class="in_menu"><a class="settings" href="settings.php">Param&egrave;tres</a> <a class="deconnect" href="deconnect.php"> Deconnect</a></p>
-		
+
 			</div>
 		</div>
 		<div id="home">
