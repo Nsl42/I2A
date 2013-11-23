@@ -13,6 +13,24 @@ include_once('../../../tools/connection.php');
 		<?php include('../../../menutop.php'); ?>
 		<div id="new_todo">
 		
+			<div id="list_details">
+			<h4> Détails de la liste </h4>
+			<label for="titre">Titre : </label><input type="text" name="titre" id="titre" />
+			<p>Due Time ? </p>
+			<label for="day">Jour :</label><select name="day"><?php for($i = 0; $i <= 31; $i++) echo "<option>"+$i+"</option>"; ?></select>
+			<label for="month">Mois : </label><select name="month"><option>Janvier</option><option>Fevrier</option><option>Mars</option><option>Avril</option><option>Mai</option><option>Juin</option><option>Juillet</option><option>Aout</option><option>Septembre</option><option>Octobre</option><option>Novembre</option><option>Decembre</option></select>
+			<label for="year"> Année : </label><select name="year"><?php for($i = 2013; $i<=2020; $i++) echo "<option>"+$i+"</option>"; ?></select>
+			<label for="hour"> Heure : </label><select name="hour"><?php for($i=1; $i<24; $i++) echo "<option>"+$i+"</option>";?></select>
+			<label for="minute">Minute : </label><select name="minute"><?php for($i=00; $i < 60; $i++) echo"<option>"+ $i + "</option>"; ?></select>
+			</div>
+			<div id="items_details">
+			<p> Hey !! </p>
+				<div id="item">
+				</div>
+				<div id="add_item">
+				</div>
+				<p> reHey ! </p>
+			</div>
 		</div>
 	</body>
 	</html>

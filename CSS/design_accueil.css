@@ -195,3 +195,42 @@ margin-bottom: 45px;
     font-style: normal;
 
 }
+
+
+/** TO DO **/
+
+#new_todo
+{
+	width: 100%;
+	background-color: rgba(67,0,78,0.5);
+	border: solid rgba(33,0,38,1) 5px;
+	position: fixed;
+	top: 100px;
+	left:0px;
+	text-align: center;
+	color: #b799bc;
+	}
+	
+	#list_details
+	{
+	width: 49.25%;
+	background-color: rgba(67,0,78,0.5);
+	border: solid rgba(33,0,38,1) 5px;
+	text-align: center;
+	color: #b799bc;
+	float: left;
+	margin:0.5%;
+	display:inline-block;
+	
+	}
+	#items_details {
+	width: 47.75%;
+	background-color: rgba(67,0,78,0.5);
+	border: solid rgba(33,0,38,1) 5px;
+	text-align: center;
+	color: #b799bc;
+	margin-right: 0.5%;
+	margin-top: 0.5%;
+	float: right;
+	display: inline-block;
+	}
