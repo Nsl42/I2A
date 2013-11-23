@@ -84,7 +84,6 @@ class user{
 	  public function getfromid($id)
 	  {
 	  	$connection = new connection();
-		$connection->connect();
 		$answ = $connection->Select("SELECT * FROM user WHERE id = ".$id.";");
 		$data = $answ->fetch();
 		$this->setmail($data['mail']);
@@ -97,6 +96,7 @@ class user{
 	  public function getfrommail($mail)
 	  {
 	  	$connection = new connection();
+	
 		$answ = $connection->Select("SELECT * FROM user WHERE mail = '".$mail."';");
 		$data = $answ->fetch();
 		$this->setmail($data['mail']);

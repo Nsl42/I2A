@@ -1,4 +1,4 @@
-<?php
+e<?php
 /** 
  * Classe Connection pour l'I2A
  * 
@@ -14,29 +14,44 @@
 		const USER = 'root';
 		const PASSWORD = '';
 		private $IS_CONNECTED;
+		private $C;
 		
 		private function is_connected()
 		{
 			return $this->IS_CONNECTED;
 		}
+		private function getc()
+		{
+			return $this->C;
+		}
+		private function setc($c)
+		{
+			$this->C = $c;
+		}
 		
 		/** Constructeur, Hydrateur **/
 		
-		function __connection()
-		{$this->IS_CONNECTED = FALSE;}
+		function __construct()
+		{if($this->is_connected())
+		{
+		
+		}
+		else
+		 $this->connect();
+		}
 		
 			
 		/**
 		 * Connection function
 		 * 
 		 */
-		 private function connect()
+		 public function connect()
 		 {
 		 	try{
 		 	$dns = 'mysql:host='.$this::HOST.';dbname='.$this::DB.';';
-			$connection = new PDO( $dns, $this::USER, $this::PASSWORD);
-			return $connection;
-			$this->IS_CONNECTED = TRUE;}
+			$this->setc(new PDO( $dns, $this::USER, $this::PASSWORD));
+			$this->IS_CONNECTED = TRUE;
+			}
 			catch ( Exception $e ) {
 			  echo "Connection à MySQL impossible : ", $e->getMessage();
 			  die();
@@ -51,8 +66,10 @@
 		  
 		 public function Select($req)
 		 {
-		 	$connection = $this->connect();
-			$ans = $connection->query($req);
+		 	var_dump($this->getc());
+			var_dump($req);
+			
+			$ans = $this->getc()->query($req);
 		 	
 		 	return $ans;
 		
