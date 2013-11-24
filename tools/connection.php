@@ -66,19 +66,18 @@
 		  
 		 public function Select($req)
 		 {
-		 	var_dump($this->getc());
-			var_dump($req);
+		 	
 			
 			$ans = $this->getc()->query($req);
-		 	
+		 	//var_dump($req);
 		 	return $ans;
 		
    		 }
 		 
-		 public function Insert($req)
+		 public function exec($req)
 		 {
 			$this->getc()->exec($req);
-		 
+		 //var_dump($req);
 		 }
 		 }
    		 

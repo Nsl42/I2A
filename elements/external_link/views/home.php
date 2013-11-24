@@ -12,7 +12,13 @@
 		<div id="home">
 		
 			<div id="aside_left">
-				<?php include_once("../controls/display_all.php"); ?>
+				<form method="POST" action="../controls/delete.php">
+					<h4>Liste des liens : </h4>
+					<ul>
+						<?php include_once("../controls/display_all.php"); ?>
+					</ul>
+					<input type="submit" value="Effacer la selection" />
+				</form>
 			</div>
 			<div id="aside_right">
 				<div id="top">

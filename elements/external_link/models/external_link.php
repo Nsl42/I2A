@@ -63,15 +63,19 @@ include_once("../../../tools/connection.php");
 		/** Vérification de l'id **/
 		$c = new Connection();
 		$c->connect();
-		$answ = $c->Select("Select count(id) from external_link");
+		$answ = $c->Select("Select count(id) as cpt from external_link where user_id = ".$_SESSION['id'].";");
 		$data = $answ->fetch();
+		echo $id;
+		echo $data['cpt'];
 		
-			if($id <= $data['count(id)'])
+			if($id <= $data['cpt'])
 			{
 		/** récupération **/
-			$answ = $c->Select("Select * from external_link where id = " + $id + ";");
+		$req = "Select * from external_link where id = " . $id . " and user_id = ".$_SESSION['id'].";";
+		var_dump($req);
+			$answ = $c->Select($req);
 			$data = $answ->fetch();
-		/** Hydratation **/
+		 /** Hydratation **/
 		$this->Hydrate($data['id'], $data['title'], $data['href'], $data['user_id']);
 	}
 }
@@ -83,8 +87,17 @@ include_once("../../../tools/connection.php");
 		echo $this->getid_user();
 		$req = "INSERT INTO external_link (title, href, user_id) VALUES ('". $this->gettitle() ."','".$this->gethref()."',".$this->getid_user().");";
 		var_dump($answ);
-		$c->Insert($req);
+		$c->exec($req);
 		?> <script type="text/javascript">window.alert("Element Added !");</script><?php
+	}
+	
+	public function delete()
+	{
+	$c = new Connection();
+	$answ = $c->connect();
+	$req = "DELETE FROM external_link WHERE id = ".$this->getid().";";
+	$c->exec($req);
+	?> <script type="text/javascript">window.alert("Element Deleted !");</script><?php
 	}
 	}
 ?>
