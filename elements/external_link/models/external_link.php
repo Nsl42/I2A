@@ -63,16 +63,15 @@ include_once("../../../tools/connection.php");
 		/** Vérification de l'id **/
 		$c = new Connection();
 		$c->connect();
-		$answ = $c->Select("Select count(id) as cpt from external_link where user_id = ".$_SESSION['id'].";");
+		$answ = $c->Select("Select max(ID) as max from external_link where user_id = ".$_SESSION['id'].";");
 		$data = $answ->fetch();
-		echo $id;
-		echo $data['cpt'];
+	
 		
-			if($id <= $data['cpt'])
+			if($id <= $data['max'])
 			{
 		/** récupération **/
 		$req = "Select * from external_link where id = " . $id . " and user_id = ".$_SESSION['id'].";";
-		var_dump($req);
+		//var_dump($req);
 			$answ = $c->Select($req);
 			$data = $answ->fetch();
 		 /** Hydratation **/
@@ -86,7 +85,7 @@ include_once("../../../tools/connection.php");
 		$answ = $c->connect();
 		echo $this->getid_user();
 		$req = "INSERT INTO external_link (title, href, user_id) VALUES ('". $this->gettitle() ."','".$this->gethref()."',".$this->getid_user().");";
-		var_dump($answ);
+		//var_dump($answ);
 		$c->exec($req);
 		?> <script type="text/javascript">window.alert("Element Added !");</script><?php
 	}
@@ -97,6 +96,7 @@ include_once("../../../tools/connection.php");
 	$answ = $c->connect();
 	$req = "DELETE FROM external_link WHERE id = ".$this->getid().";";
 	$c->exec($req);
+	var_dump($req);
 	?> <script type="text/javascript">window.alert("Element Deleted !");</script><?php
 	}
 	}

@@ -4,18 +4,20 @@
 	$u = new user();
 	$u->getfromid($_SESSION['id']);
 	$u->fetchallexternals();
-	
+	$l = new external_link();
 	?>
 		
 			<?php
 			do
 			{
-				
-				$l = new external_link();
-				$l = $u->getallexternals()->getCurrent();
-				?>
-				<?php echo "<li><INPUT type='checkbox' name='suppr[]' value='".$l->getid()."' /><a href='". $l->gethref()."'>".$l->gettitle()."</a></li>";
+				//var_dump($u->getallexternals());
+						
+	  			$l = $u->getallexternals()->getCurrent();
+				echo "<li><INPUT type='checkbox' name='suppr[]' value='".$l->getid()."' /><a target='_blank' href='". $l->gethref()."'>".$l->gettitle()."</a></li>";
 				$u->getallexternals()->next();
-			}while(!$u->getallexternals()->currentObjIsLast())
+			}while(!$u->getallexternals()->currentObjIsLast());
+			$l = $u->getallexternals()->getCurrent();
+			echo "<li><INPUT type='checkbox' name='suppr[]' value='".$l->getid()."' /><a target='_blank' href='". $l->gethref()."'>".$l->gettitle()."</a></li>";
+				
 			?>
 		

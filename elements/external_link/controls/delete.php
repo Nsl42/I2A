@@ -8,8 +8,11 @@
 	{
 		foreach($_POST['suppr'] as $key)
 		{
+			
 			$l->getfromid($key);
+			
 			$l->delete();
+		
 		}
 		
 		echo("<script type='text/javascript'>window.location.href='../../../accueil.php';</script>");
