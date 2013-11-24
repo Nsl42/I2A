@@ -93,7 +93,8 @@ class user{
 	 
 	 public function setallexternals($allexternals)
 	 {
-	 	$this->ALL_EXTERNALS = $allexternals;
+	 	$this->All_EXTERNALS = $allexternals;
+	
 	 }
 	 public function getalltodos()
 	 {

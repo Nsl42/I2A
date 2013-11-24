@@ -3,8 +3,11 @@
 
 	$u = new user();
 	$u->getfromid($_SESSION['id']);
-	$u->fetchallexternals();
-	$l = new external_link();
+	$u->fetchallexternals();	
+	if(!$u->getallexternals()->IsEmpty())
+	{
+	
+	$n = new notepad();
 	?>
 		
 			<?php
@@ -18,6 +21,6 @@
 			}while(!$u->getallexternals()->currentObjIsLast());
 			$l = $u->getallexternals()->getCurrent();
 			echo "<li><INPUT type='checkbox' name='suppr[]' value='".$l->getid()."' /><a target='_blank' href='". $l->gethref()."'>".$l->gettitle()."</a></li>";
-				
+	}	
 			?>
 		
