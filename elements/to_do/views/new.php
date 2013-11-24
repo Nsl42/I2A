@@ -11,9 +11,9 @@ include_once('../../../tools/connection.php');
 	</head>
 	<body>
 		<?php include('../../../menutop.php'); ?>
-		<div id="new_todo">
+		<div id="home">
 		
-			<div id="list_details">
+			<div id="aside_left">
 			<h4> D&eacute;tails de la liste </h4>
 			<label for="titre">Titre : </label><input type="text" name="titre" id="titre" />
 			<p>Due Time ? </p>
@@ -23,10 +23,10 @@ include_once('../../../tools/connection.php');
 			<label for="hour"> Heure : </label><select name="hour"><?php for($i=1; $i<24; $i++) {echo "<option>";echo $i; echo "</option>";}?></select>
 			<label for="minute">Minute : </label><select name="minute"><?php for($i=00; $i < 60; $i++){echo "<option>";echo $i; echo "</option>";} ?></select>
 			</div>
-			<div id="items_details">
-				<div id="item">
+			<div id="aside_right">
+				<div id="top">
 				</div> 
-				<div id="add_item">
+				<div id="bottom">
 				</div>
 			</div>
 		</div>

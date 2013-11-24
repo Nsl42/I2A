@@ -1,6 +1,4 @@
 <?php 
-	include('../../../tools/connection.php');
-	include('../../../tools/collection.php');
 	
 	class to_do{
 	
@@ -13,7 +11,7 @@
 	private $ALL_ITEMS;
 	
 	
-	public __construct()
+	function __construct()
 	{}
 	
 	public function Hydrate($id, $titre, $complete, $due_time, $priority, $user)
@@ -79,5 +77,5 @@
 	
 	/** Useful Functions **/
 	
-	
+	}
 		

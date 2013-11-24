@@ -1,4 +1,4 @@
-e<?php
+<?php
 /** 
  * Classe Connection pour l'I2A
  * 
@@ -75,6 +75,11 @@ e<?php
 		
    		 }
 		 
+		 public function Insert($req)
+		 {
+			$this->getc()->exec($req);
+		 
+		 }
 		 }
    		 
 ?>

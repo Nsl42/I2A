@@ -5,7 +5,7 @@
 			   
 			</div>
 			<div id="site_logo">
-				<img src="http://127.0.0.1/I2A/img/icon/logo250x100.png" />
+				<a href="http://localhost/I2A/accueil.php"><img src="http://127.0.0.1/I2A/img/icon/logo250x100.png" /></a>
 			</div>
 			<div id="toolbox">
 				<p class="in_menu"><a class="settings" href="settings.php">Param&egrave;tres</a> <a class="deconnect" href="deconnect.php"> Deconnect</a></p>

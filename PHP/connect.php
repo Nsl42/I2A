@@ -12,6 +12,7 @@
 		$_SESSION['mail'] = $user->getmail();
 		$_SESSION['nomprenom'] = $user->getnomprenom();
 		$_SESSION['photo'] = $user->getphoto();
+		$_SESSION['id'] = $user->getid();
 		?><script type='text/javascript'> window.location = "../accueil.php"</script> <?php
 	}else
 		?><script type='text/javascript'> window.location = "../index.php?e=403"</script><?php

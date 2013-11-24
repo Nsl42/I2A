@@ -197,21 +197,9 @@ margin-bottom: 45px;
 }
 
 
-/** TO DO **/
+/** ELEMENTS **/
 
-#new_todo
-{
-	width: 100%;
-	background-color: rgba(67,0,78,0.5);
-	border: solid rgba(33,0,38,1) 5px;
-	position: fixed;
-	top: 100px;
-	left:0px;
-	text-align: center;
-	color: #b799bc;
-	}
-	
-	#list_details
+	#aside_left
 	{
 	width: 49.25%;
 	height:500px;
@@ -224,7 +212,7 @@ margin-bottom: 45px;
 	display:inline-block;
 	
 	}
-	#items_details {
+	#aside_right {
 	width: 47.75%;
 	height:500px;
 	background-color: rgba(67,0,78,0.5);
@@ -236,13 +224,13 @@ margin-bottom: 45px;
 	float: right;
 	display: inline-block;
 	}
-		#item{
+		#top{
 			margin:0.5% 0.5% 0.5% 0.25%;
 			height: 49.25%;
 			border: 2px dashed black;
 			
 		}
-		#add_item{
+		#bottom{
 			margin:0.25% 0.5% 0.5% 0.5%;
 			height: 49.25%;
 			border: 2px dashed black;

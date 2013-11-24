@@ -1,7 +1,5 @@
 <?php session_start();
 
-include_once('tools/user.php'); 
-include_once('tools/connection.php');
 	  
 	  if(isset($_SESSION['is_connected']))
 	  {?>
@@ -14,7 +12,7 @@ include_once('tools/connection.php');
 		<div id="home">
 		<h2> Welcome </h2>
 		<hr />
-		<div id="external_links"></div><div id="internal_links"></div><div id="schedule"></div>
+		<a href="elements/external_link/views/home.php"><div id="external_links"></div></a><div id="internal_links"></div><div id="schedule"></div>
 		<a href="elements/to_do/views/new.php"><div id="to_do"></div></a><div id="notepad"></div>
 		</div>
 	</body>
