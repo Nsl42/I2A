@@ -214,6 +214,7 @@ margin-bottom: 45px;
 	#list_details
 	{
 	width: 49.25%;
+	height:500px;
 	background-color: rgba(67,0,78,0.5);
 	border: solid rgba(33,0,38,1) 5px;
 	text-align: center;
@@ -225,6 +226,7 @@ margin-bottom: 45px;
 	}
 	#items_details {
 	width: 47.75%;
+	height:500px;
 	background-color: rgba(67,0,78,0.5);
 	border: solid rgba(33,0,38,1) 5px;
 	text-align: center;
@@ -234,3 +236,14 @@ margin-bottom: 45px;
 	float: right;
 	display: inline-block;
 	}
+		#item{
+			margin:0.5% 0.5% 0.5% 0.25%;
+			height: 49.25%;
+			border: 2px dashed black;
+			
+		}
+		#add_item{
+			margin:0.25% 0.5% 0.5% 0.5%;
+			height: 49.25%;
+			border: 2px dashed black;
+		}
