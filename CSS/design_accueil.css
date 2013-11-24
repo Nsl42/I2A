@@ -215,6 +215,9 @@ margin-bottom: 45px;
 		#aside_left fieldset{
 			height : 475;
 		}
+		#aside_left h4{
+		display:inline;
+		}
 	#aside_right {
 	width: 47.75%;
 	height:500px;
@@ -238,3 +241,4 @@ margin-bottom: 45px;
 			height: 49.25%;
 			border: 2px dashed black;
 		}
+		

@@ -13,7 +13,7 @@
 		<h2> Welcome </h2>
 		<hr />
 		<a href="elements/external_link/views/home.php"><div id="external_links"></div></a><div id="internal_links"></div><div id="schedule"></div>
-		<a href="elements/to_do/views/new.php"><div id="to_do"></div></a><div id="notepad"></div>
+		<a href="elements/to_do/views/new.php"><div id="to_do"></div></a><a href="elements/notepad/views/home.php"><div id="notepad"></div></div>
 		</div>
 	</body>
 </html>

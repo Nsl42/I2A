@@ -8,6 +8,8 @@
 	include_once('collection.php');
 	include_once('C:\\wamp\\www\\I2A\\elements\\external_link\\models\\external_link.php');
 	include_once('C:\\wamp\\www\\I2A\\elements\\to_do\\models\\to_do.php');
+	include_once('C:\\wamp\\www\\I2A\\elements\\notepad\\models\\notepad.php');
+	
 class user{
 	
 	private $ID;
@@ -17,6 +19,7 @@ class user{
 	private $PHOTO;
 	private $All_EXTERNALS;
 	private $ALL_TODOS;
+	private $ALL_NOTES;
 	
 	
 	/**
@@ -85,20 +88,28 @@ class user{
 	
 	 public function getallexternals()
 	 {
-	 	return $this->ALL_EXTERNALS;
+	 	return $this->All_EXTERNALS;
 	 }
 	 
 	 public function setallexternals($allexternals)
 	 {
 	 	$this->ALL_EXTERNALS = $allexternals;
 	 }
-	 public function getall_todos()
+	 public function getalltodos()
 	 {
 	 	return $this->ALL_TODOS;
 	 }
 	 public function setallto_dos($allto_dos)
 	 {
 	 	$this->ALL_TODOS = $allto_dos;
+	 }
+	  public function getallnotes()
+	 {
+	 	return $this->ALL_NOTES;
+	 }
+	 public function setallnotes($allnotes)
+	 {
+	 	$this->ALL_NOTES = $allnotes;
 	 }
 	 /**
 	  * Useful Functions
@@ -159,6 +170,22 @@ class user{
 				$externals->add($l);				
 			}
 			$this->setallexternals($externals);
+		}
+		
+		/** Notepad **/
+		
+		public function fetchallnotes()
+		{
+			$c = new connection();
+			$answ = $c->Select("SELECT * FROM notepad where user_id=".$this->getid().";");
+			$notes = new Collection();
+			while($data = $answ->fetch())
+			{
+				$n = new notepad();
+				$n->Hydrate($data['id'], $data['title'], $data['text'], $data['user_id']);
+				$notes->add($n);
+			}
+			$this->setallnotes($notes);
 		}
 	  
 	  
