@@ -6,10 +6,12 @@ include_once("../../../tools/connection.php");
 	private $TITLE;
 	private $TEXT;
 	private $ID_USER;
+	private $DUE_TIME;
+	private $PRIORITY;
 	
 				/** CONSTRUCTEUR & HYDRATEUR **/
 	
-	public function __construct()
+	 function __construct()
 	{
 	}
 	
@@ -55,6 +57,22 @@ include_once("../../../tools/connection.php");
 	{
 		$this->ID_USER = $id_user;
 	}
+	public function getdue_time()
+	{
+		return $this->DUE_TIME;
+	}
+	public function setdue_time($due_time)
+	{
+		$this->DUE_TIME = $due_time;
+	}
+	public function getpriority()
+	{
+		return $this->PRIORITY;
+	}
+	public function setpriority($priority)
+	{
+		$this->PRIORITY = $priority;
+	}
 	
 				/** USEFUL FUNCTIONS **/
 				
@@ -84,11 +102,15 @@ include_once("../../../tools/connection.php");
 		$c = new Connection();
 		$answ = $c->connect();
 		echo $this->getid_user();
-		$req = "INSERT INTO notepad (title, text, user_id) VALUES ('". $this->gettitle() ."','".$this->gettext()."',".$this->getid_user().");";
+		if(is_null($this->getdue_time()))
+			$req = "INSERT INTO notepad (title, text, user_id) VALUES ('". $this->gettitle() ."','".$this->gettext()."',".$this->getid_user().");";
+		else 
+			$req = "INSERT INTO notepad (title, text, user_id, due_time) VALUES ('". $this->gettitle() ."','".$this->gettext()."',".$this->getid_user().", ".$this->getdue_time().");";
 		//var_dump($answ);
 		$c->exec($req);
 		?> <script type="text/javascript">window.alert("Element Added !");</script><?php
 	}
+	
 	
 	public function delete()
 	{

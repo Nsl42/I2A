@@ -1,5 +1,5 @@
 <?php
-include_once("../../../tools/connection.php");
+//include_once("../../../tools/connection.php");
 	class external_link{
 	
 	private $ID;
